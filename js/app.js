@@ -16,7 +16,6 @@ for (let i=0; i < 100; i++) {
     // impostare la variabile per determinare se un numero è multiplo di 5 (n / 3 dà resto = 0)
     const buzz = num % 5 === 0
 
-    // Il risultato che deve 'vincere' sugli altri per essere stampato è quello con due valenze quindi:
     // SE un numero è multiplo di 3 e di 5, stampare la scritta 'FizzBuzz'
     if (fizz && buzz) {
         result += '<div class="text-center col-3 p-2">FIZZBUZZ</div>'
