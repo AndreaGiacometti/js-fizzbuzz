@@ -2,10 +2,10 @@ console.log ('FIZZBUZZ')
 
 //scrivere un programma che stampi in console i numeri da 1 a 100:
 // - impostare un ciclo che si ripeta 100 volte
+let result = "";
 for (let i=0; i < 100; i++) {
     // - scrivere una variabile che conti i numeri da 1 e non da 0
     const num = i + 1
-
     //stampare i numeri secondo questo procedimento:
     // - se un numero è multiplo di 3, stampare la scritta 'Fizz'
     // - se un numero è multiplo di 5, stampare la scritta 'Buzz'
@@ -19,20 +19,21 @@ for (let i=0; i < 100; i++) {
     // Il risultato che deve 'vincere' sugli altri per essere stampato è quello con due valenze quindi:
     // SE un numero è multiplo di 3 e di 5, stampare la scritta 'FizzBuzz'
     if (fizz && buzz) {
-        console.log ('FizzBuzz') 
+        result += '<div class="text-center col-3 p-2">FIZZBUZZ</div>'
      }
     // SE INVECE è multiplo di 3, stampare la scritta 'Fizz'
     else if (fizz) {
-       console.log ('Fizz') 
+        result += '<div class="text-center col-3 p-2">FIZZ</div>'
     // SE INVECE è multiplo di 5, stampare la scritta 'Buzz'
     } else if (buzz) {
-        console.log ('Buzz')
+        result += '<div class="text-center col-3 p-2">BUZZ</div>'
     }
     // ALTRIMENTI stampare la variabile 'num'
     else {
-        console.log (num)
+        result += '<div class="text-center col-3 p-2">' + num + '</div>'
     }
+
 }
 
-
+document.getElementById('stamp').innerHTML = result
 // {}
